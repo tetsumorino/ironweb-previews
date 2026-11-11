@@ -201,3 +201,5 @@ figure{margin:0}
 .fv .facts3{display:flex;gap:6px}
 .fv>.pack{position:absolute;right:12px;bottom:12px;width:21%;z-index:4;transform:rotate(-4deg)}
 @media (max-width:360px){.fv .fvrow{gap:8px}}
+/* 美容の最初の画面 顔が切れないように */
+.t-biyou .fv .model{right:0;width:84%;object-position:80% 8%}
