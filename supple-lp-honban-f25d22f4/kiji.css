@@ -156,10 +156,15 @@ img{max-width:100%;display:block}
 .t-maca .black{background:linear-gradient(180deg,#121A2E,#1B2742)}
 
 /* 本番 最初の画面の見出し(顔にかからない幅) */
-.fv .lead{max-width:60%;white-space:normal;line-height:1.5;margin-top:40px!important}
+.fv .lead{max-width:74%;white-space:normal;line-height:1.5;margin-top:40px!important}
 .fv h1 .a{font-size:24px!important}
 .fv h1 .b{font-size:60px!important;line-height:1.1}
 .fv h1 .b2{font-size:46px;line-height:1.15}
 .fv h1 .c{font-size:27px!important}
 .fv .combo{max-width:82%}
 @media (max-width:360px){.fv h1 .b{font-size:50px!important}.fv h1 .b2{font-size:40px}.fv h1 .a{font-size:21px!important}.fv h1 .c{font-size:23px!important}}
+
+/* 語の途中で切らない */
+.nw{white-space:nowrap}
+.art p,.bubble div,.checks li,.terms,.foot p,.off,.q .sub,.qb p,.pricebox td,.facts span,.fv .lead{word-break:keep-all;overflow-wrap:anywhere}
+.reveal .name{word-break:keep-all}
