@@ -168,3 +168,13 @@ img{max-width:100%;display:block}
 .nw{white-space:nowrap}
 .art p,.bubble div,.checks li,.terms,.foot p,.off,.q .sub,.qb p,.pricebox td,.facts span,.fv .lead{word-break:keep-all;overflow-wrap:anywhere}
 .reveal .name{word-break:keep-all}
+
+/* 参考LPを踏まえた追加 */
+.strip{display:flex;flex-direction:column;gap:2px;background:#FFF8E1;border-top:2px solid #E3B84A;border-bottom:2px solid #E3B84A;padding:10px 16px;font-size:14px;line-height:1.6;text-align:center;color:#2A2A2A}
+.strip b{color:var(--red);font-size:16px}
+.strip small{font-size:12px;color:#666;margin-left:2px}
+.btn-sub{margin:8px 0 0;font-size:13px;font-weight:700;color:#F3E6C4}
+.midcta{margin:0 0 30px;padding:18px 14px;border:2px solid #E3B84A;border-radius:8px;background:#FFFBEF}
+.midcta p{margin:0 0 12px;font-size:15px;line-height:1.7}
+.midcta b{color:var(--red);font-size:20px}
+.t-multi .btn-sub{color:#E8F5EC}
