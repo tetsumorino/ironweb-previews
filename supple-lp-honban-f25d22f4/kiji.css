@@ -225,3 +225,32 @@ img{max-width:100%;display:block}
  .t-nmn .pc-terms li::before,.t-maca .pc-terms li::before{color:#B8913F}
 }
 @media (min-width:1000px) and (max-width:1199px){.pc-l{display:none}.pc-r{left:calc(50% + 240px + 20px);width:220px;padding:20px 14px 18px}.pc-r .btn{font-size:15px;padding:13px 30px 13px 10px}.pc-r .btn small{display:none}.pc-zero span{font-size:90px}}
+
+/* 11/14 小さい文字を大きく(注記14px・本文の補足15px以上) */
+.sample{font-size:13px}
+.note{font-size:14px!important;color:#666}
+.fv .pr{font-size:12px}
+.fv .brand{font-size:13px}
+.fv .facts{font-size:14px}
+.fv .imgnote{font-size:12px}
+.ing b small{font-size:15px}
+.ing small.s{font-size:13px}
+.btn small{font-size:14px}
+.offer .terms{font-size:14px;line-height:1.8;color:#ddd}
+.foot{font-size:14px;line-height:1.8;color:#ccc}
+.breakdown td:first-child small{font-size:13px}
+.strip{font-size:15px}
+.strip small{font-size:13px}
+.btn-sub{font-size:14px}
+.kanshu1{font-size:13px}
+.bubble div{font-size:16px}
+.checks li{font-size:17px}
+.medal>div{font-size:13px}
+.qb p{font-size:17px}
+.opts button{font-size:16px}
+.pricebox table{font-size:16px}
+.midcta p{font-size:16px}
+.pc-s,.pc-fact,.pc-terms{font-size:14px!important}
+.pc-rib{font-size:14px!important}
+.tbd{font-size:13px!important}
+.fv .imgnote{font-size:13px}
