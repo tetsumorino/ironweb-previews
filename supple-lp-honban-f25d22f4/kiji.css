@@ -178,3 +178,10 @@ img{max-width:100%;display:block}
 .midcta p{margin:0 0 12px;font-size:15px;line-height:1.7}
 .midcta b{color:var(--red);font-size:20px}
 .t-multi .btn-sub{color:#E8F5EC}
+
+/* 11/14 修正 */
+.fv{min-height:0!important;padding-bottom:18px}
+.fv .bottom{position:relative!important;left:auto;right:auto;bottom:auto;margin-top:30px;padding:0 0 0 0!important}
+.fv .in{padding-bottom:0}
+.kanshu1{white-space:nowrap;font-size:12px;letter-spacing:0}
+.t-maca .fv .ph{right:-40px;width:86%;object-position:78% 0%}
