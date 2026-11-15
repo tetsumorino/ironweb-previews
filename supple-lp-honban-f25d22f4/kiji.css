@@ -284,9 +284,3 @@ img{max-width:100%;display:block}
 /* 11/15 人物を小さめに右上へ、見出しは顔の下から */
 .fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph{height:360px!important;top:44px!important}
 .fv .lead{margin-top:200px!important}
-/* 11/15 人物は上半身だけ、袋のすぐ上へ。見出しはロゴのすぐ下から */
-.fv .lead{margin-top:28px!important}
-.fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph{top:auto!important;bottom:178px!important;right:0!important;width:230px!important;height:260px!important;object-fit:cover!important;object-position:center top!important;
- -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 25%)!important;mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 25%)!important}
-.fv .bottom{margin-top:150px!important}
-.fv .in{position:relative;z-index:3}
