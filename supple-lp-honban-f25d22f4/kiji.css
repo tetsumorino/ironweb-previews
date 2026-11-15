@@ -295,3 +295,5 @@ img{max-width:100%;display:block}
 .fv .bottom{margin-top:16px!important;align-items:center!important}
 /* 11/15 金文字の下(gの下の払い)が切れないよう塗りの範囲を下へ広げる */
 .gold{padding-bottom:.18em;margin-bottom:-.18em}
+/* 11/15 3行目(工場直営の価格で 等)を少し下げ、1行目と2行目の間と同じくらいの間隔に */
+.fv h1 .c{margin-top:10px!important}
