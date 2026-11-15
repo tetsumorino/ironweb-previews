@@ -277,3 +277,10 @@ img{max-width:100%;display:block}
 .fc-btn{position:relative;overflow:hidden}
 .fc-btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);animation:shine 3.2s infinite}
 @media (prefers-reduced-motion:reduce){.fc-btn::before{animation:none;display:none}}
+/* 11/15 最初の画面の人物を見切れなく */
+.fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph{right:0!important;left:auto!important;top:0!important;width:auto!important;height:540px!important;max-width:none!important;object-fit:contain!important;object-position:right top!important;transform:none!important;
+ -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to top,transparent 0,#000 22%)!important;-webkit-mask-composite:source-in!important;
+ mask-image:linear-gradient(to right,transparent 0,#000 28%),linear-gradient(to top,transparent 0,#000 22%)!important;mask-composite:intersect!important}
+/* 11/15 人物を小さめに右上へ、見出しは顔の下から */
+.fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph{height:360px!important;top:44px!important}
+.fv .lead{margin-top:200px!important}
