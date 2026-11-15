@@ -284,3 +284,8 @@ img{max-width:100%;display:block}
 /* 11/15 人物を小さめに右上へ、見出しは顔の下から */
 .fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph{height:360px!important;top:44px!important}
 .fv .lead{margin-top:200px!important}
+/* 11/15 写真はそのまま、文字だけロゴの下へ寄せる。追従ボタンの上だけの線はなし */
+@media (max-width:999px){.fv .lead{margin-top:28px!important}}
+.float-cta{border-top:0!important}
+@media (max-width:999px){.t-maca .fv .ph,.fv.light .ph{height:320px!important;top:56px!important}}
+@media (max-width:360px){.fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph,.fv.light .ph{height:280px!important;top:60px!important}}
