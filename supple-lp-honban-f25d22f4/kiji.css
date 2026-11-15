@@ -289,3 +289,5 @@ img{max-width:100%;display:block}
 .float-cta{border-top:0!important}
 @media (max-width:999px){.t-maca .fv .ph,.fv.light .ph{height:320px!important;top:56px!important}}
 @media (max-width:360px){.fv .ph,.t-nmn .fv .ph,.t-maca .fv .ph,.fv.light .ph{height:280px!important;top:60px!important}}
+/* 11/15 PCも同じく文字をロゴ下へ */
+@media (min-width:1000px){.fv .lead{margin-top:28px!important}.t-maca .fv .ph,.fv.light .ph{height:320px!important;top:56px!important}}
