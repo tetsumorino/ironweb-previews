@@ -254,3 +254,22 @@ img{max-width:100%;display:block}
 .pc-rib{font-size:14px!important}
 .tbd{font-size:13px!important}
 .fv .imgnote{font-size:13px}
+
+/* 11/15 下に固定する申し込みボタン */
+.float-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:50;width:100%;max-width:480px;display:flex;align-items:center;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:2px solid #E3B84A;box-shadow:0 -4px 16px rgba(0,0,0,.15)}
+.fc-t{flex:1;line-height:1.35;font-size:13px;color:#333}
+.fc-t b{display:block;font-size:16px;color:var(--red)}
+.fc-btn{flex:0 0 auto;background:linear-gradient(180deg,#FF5A3C,#D7193A);color:#fff;text-decoration:none;font-weight:900;font-size:17px;padding:13px 26px;border-radius:999px;box-shadow:0 3px 0 #8E0F25}
+.lp{padding-bottom:78px}
+@media (min-width:1000px){.float-cta{display:none}.lp{padding-bottom:0}}
+/* 11/15 重なり・切れの修正 */
+.fv .imgnote{top:auto!important;bottom:4px!important;right:10px!important}
+.fv{padding-bottom:28px!important}
+.t-nmn .fv .ph{right:-110px!important;object-position:70% 0%}
+.t-nmn .fv h1 .c{font-size:25px!important}
+.ings.n5{grid-template-columns:1fr 1fr}
+.ings.n5 .ing:last-child{grid-column:1/-1;max-width:50%;margin:0 auto;width:100%}
+.fv .imgnote{background:rgba(0,0,0,.45);color:#fff!important;padding:0 6px;border-radius:2px}
+.fv.light .imgnote{background:rgba(255,255,255,.85);color:#555!important}
+.pricebox td:last-child{white-space:nowrap;padding-left:10px}
+.ing small.s{color:#8A6D2A!important}
