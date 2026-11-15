@@ -293,3 +293,5 @@ img{max-width:100%;display:block}
 @media (min-width:1000px){.fv .lead{margin-top:28px!important}.t-maca .fv .ph,.fv.light .ph{height:320px!important;top:56px!important}}
 /* 11/15 本文と0円バッジの間を詰める */
 .fv .bottom{margin-top:16px!important;align-items:center!important}
+/* 11/15 金文字の下(gの下の払い)が切れないよう塗りの範囲を下へ広げる */
+.gold{padding-bottom:.18em;margin-bottom:-.18em}
