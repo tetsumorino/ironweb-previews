@@ -273,3 +273,7 @@ img{max-width:100%;display:block}
 .fv.light .imgnote{background:rgba(255,255,255,.85);color:#555!important}
 .pricebox td:last-child{white-space:nowrap;padding-left:10px}
 .ing small.s{color:#8A6D2A!important}
+/* 11/15 追従ボタンも光らせる */
+.fc-btn{position:relative;overflow:hidden}
+.fc-btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);animation:shine 3.2s infinite}
+@media (prefers-reduced-motion:reduce){.fc-btn::before{animation:none;display:none}}
