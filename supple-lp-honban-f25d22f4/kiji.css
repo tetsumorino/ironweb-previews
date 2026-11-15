@@ -299,3 +299,5 @@ img{max-width:100%;display:block}
 .fv h1 .c{margin-top:10px!important}
 /* 11/15 マルチだけ: 冒頭の2行と見出しの間を少し空ける */
 .t-multi .fv .lead{margin-bottom:16px!important}
+/* 11/15 PC右の申し込み枠も上だけの線をなくす */
+.pc-r{border-top:0!important}
