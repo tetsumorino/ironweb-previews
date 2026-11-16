@@ -333,3 +333,6 @@ img{max-width:100%;display:block}
 .float-cta{transition:transform .3s}
 .float-cta.hide{transform:translate(-50%,120%)}
 .fv2 .imgnote2{bottom:172px}
+/* 11/17 ボタンの金の縁と料金帯の金線をなくす */
+.btn{box-shadow:0 5px 0 #8E0F25!important}
+.strip{border-top:0!important;border-bottom:0!important}
