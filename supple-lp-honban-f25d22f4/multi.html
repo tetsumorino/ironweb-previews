@@ -4,7 +4,7 @@
 <meta name="description" content="UP-Tサプリのマルチビタミン。石川の自社工場で、原料を量るところからカプセルに詰めるまで行っています。定期コースは初月0円。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;700;900&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="kiji.css?v=31">
+<link rel="stylesheet" href="kiji.css?v=32">
 </head>
 <body class="t-multi">
 <div class="pcbg" style="background-image:url(img/fv_multi.jpg)"></div>
@@ -138,6 +138,7 @@
 </footer>
 </div>
 <script>
+const c2=document.querySelector('.cta2'),fc=document.getElementById('floatcta');if(c2&&fc&&'IntersectionObserver' in window){fc.classList.add('hide');new IntersectionObserver(es=>es.forEach(e=>fc.classList.toggle('hide',e.isIntersecting||e.boundingClientRect.top>0))).observe(c2);}
 document.querySelectorAll('.opts').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');document.querySelector('.qdone').disabled=![...document.querySelectorAll('.opts')].every(o=>o.querySelector('[aria-pressed=true]'));}));
 document.querySelector('.qdone').addEventListener('click',()=>{const t=[...document.querySelectorAll('.opts')][2].querySelector('[aria-pressed=true]').textContent;const m={'朝':'朝ごはんのあと、コーヒーや水と一緒に飲むのがおすすめです。','夜':'夕食のあとや歯みがきの前など、毎晩同じタイミングで飲むのがおすすめです。','決めていない':'まずは朝か夜のどちらか、毎日同じ時間に決めると続けやすくなります。'};document.getElementById('qmsg').innerHTML=m[t]+'<br>定期コースなら毎月届くので、買い忘れもありません。';const r=document.getElementById('qres');r.classList.add('on');r.scrollIntoView({behavior:'smooth',block:'center'});});
 </script>

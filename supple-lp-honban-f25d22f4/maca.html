@@ -4,10 +4,10 @@
 <meta name="description" content="UP-Tサプリのマカ+シトルリン。石川の自社工場で、原料を量るところからカプセルに詰めるまで行っています。定期コースは初月0円。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;700;900&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="kiji.css?v=31">
+<link rel="stylesheet" href="kiji.css?v=32">
 </head>
 <body class="t-maca">
-<div class="pcbg" style="background-image:url(img/fv_maca.jpg)"></div>
+<div class="pcbg" style="background-image:url(img/fv_maca2.jpg)"></div>
 <aside class="pc-l" aria-hidden="true">
  <img class="pc-logo" src="img/logo.webp" alt="">
  <p class="pc-s">オーダーメイドサプリの工場がつくった</p>
@@ -27,20 +27,17 @@
 <div class="lp">
 <div class="sample"><span>初稿です。ご確認ください。</span><a href="index.html">一覧へ</a></div>
 
-<header class="fv ">
- <img class="ph" src="img/fv_maca.jpg" alt="">
- <span class="imgnote">画像はイメージです</span>
- <div class="in">
+<header class="fv2">
+ <img class="ph2" src="img/fv_maca2.jpg" alt="">
+ <div class="in2">
   <p class="brand"><span class="pr">PR</span><img src="img/logo.webp" alt="UP-T Supplement">丸井織物株式会社</p>
-  <p class="lead">朝の習慣を決めたい人へ</p>
-  <h1 class="mincho"><span class="ln a gold">朝に飲む1日分</span><span class="ln b gold">マカ×</span><span class="ln b2 gold">シトルリン</span><span class="ln c gold">同じカプセルで</span></h1>
-  <p class="combo">1日分 <b>マカ</b> 1000mg<br>× <b>シトルリン</b> 800mg<br>2つを同じカプセルに配合</p>
+  <h1><span class="who mincho">忙しい男の朝に、</span><span class="big2"><span class="nm mincho">マカ</span><span class="num gold">30,000</span><span class="u gold">mg</span></span></h1>
+  <p class="per">1袋あたり(1日1,000mg×30日分)</p>
+  <p class="plus">さらに<b>シトルリン24,000mg</b>も<br>同じカプセルに</p>
  </div>
- <div class="bottom">
-  <div class="medal"><div>定期初月<b>0</b><small>円</small></div></div>
-  <div class="facts"><span>自社工場で製造</span><span>量と内訳を表示</span><span>解約はいつでも</span></div>
-  <img class="pack" src="img/pack.webp" alt="UP-Tサプリの袋">
- </div>
+ <img class="pack2" src="img/pack.webp" alt="UP-Tサプリの袋">
+ <span class="imgnote2">画像はイメージです</span>
+ <div class="cta2"><a class="btn" href="#o1"><small>\ 定期コースの初月は無料 /</small>初月0円で始める</a><p class="terms2">2か月目から毎月1,728円<br>回数の縛りなし・解約はいつでも</p></div>
 </header>
 <div class="strip"><span><b>定期コース</b> 初月0円</span><span>2か月目から毎月<b>1,728円</b><small>(1日あたり約58円)</small></span><span>回数の縛りなし・解約はいつでも</span></div>
 <div class="black"><p class="s">オーダーメイドサプリの工場がつくった</p><p class="t mincho"><span class="gold">マカ×シトルリン<br>毎朝の1日分</span></p></div>
@@ -50,7 +47,7 @@
  <figure class="photo"><img src="img/pain_maca.jpg" alt="サプリの容器を手に取る様子"></figure>
  <p class="note" style="text-align:right;margin-bottom:16px">※画像はイメージです</p>
  <ul class="checks"><li>マカとシトルリンを、別々の<span class=nw>サプリ</span>で買っている</li><li>朝は時間がなくて、何も飲まずに家を出る</li><li><span class=nw>サプリ</span>の量を気にしたことがない</li></ul>
- <p>ひとつでも当てはまったら<br><span class="y">この記事は最後まで読んでください</span></p>
+ <p>ひとつでも当てはまったら<br><span class="y">このマカ×シトルリンが合うかもしれません</span></p>
  <p class="dots">・<br>・<br>・</p>
  <p class="huge">そんな方に朗報です!</p>
 
@@ -138,6 +135,7 @@
 </footer>
 </div>
 <script>
+const c2=document.querySelector('.cta2'),fc=document.getElementById('floatcta');if(c2&&fc&&'IntersectionObserver' in window){fc.classList.add('hide');new IntersectionObserver(es=>es.forEach(e=>fc.classList.toggle('hide',e.isIntersecting||e.boundingClientRect.top>0))).observe(c2);}
 document.querySelectorAll('.opts').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');document.querySelector('.qdone').disabled=![...document.querySelectorAll('.opts')].every(o=>o.querySelector('[aria-pressed=true]'));}));
 document.querySelector('.qdone').addEventListener('click',()=>{const t=[...document.querySelectorAll('.opts')][2].querySelector('[aria-pressed=true]').textContent;const m={'朝':'朝ごはんのあと、コーヒーや水と一緒に飲むのがおすすめです。','夜':'夕食のあとや歯みがきの前など、毎晩同じタイミングで飲むのがおすすめです。','決めていない':'まずは朝か夜のどちらか、毎日同じ時間に決めると続けやすくなります。'};document.getElementById('qmsg').innerHTML=m[t]+'<br>定期コースなら毎月届くので、買い忘れもありません。';const r=document.getElementById('qres');r.classList.add('on');r.scrollIntoView({behavior:'smooth',block:'center'});});
 </script>
