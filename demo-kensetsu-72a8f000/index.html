@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>着工書類と出勤簿の試作品(見本)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#f55438;--head:#b8361f;--ink:#2e2f2c;--sub:#5d5853;--pale:#fbefea;--line:#e4dcd7;--bg:#f6f3f1;--miss:#fde3dc}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Zen Kaku Gothic Antique',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.7;letter-spacing:.02em;text-autospace:normal}
+header{background:#fff;border-bottom:1px solid var(--line);padding:14px 16px 0;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:18px;line-height:1.4;word-break:keep-all;overflow-wrap:anywhere}
+header p{margin:2px 0 10px;font-size:13px;color:var(--sub)}
+.tabs{display:flex;gap:4px}
+.tabs button{flex:1;font:inherit;font-size:15px;font-weight:700;padding:10px 4px;border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0;background:var(--bg);color:var(--sub);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+main{max-width:760px;margin:0 auto;padding:16px}
+.panel{display:none}.panel.on{display:block}
+.step{font-size:14px;font-weight:700;color:var(--head);margin:22px 0 6px}
+.step:first-child{margin-top:4px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+label{display:block;font-size:14px;font-weight:700;margin-top:12px}
+label:first-child{margin-top:0}
+.row2 label{margin-top:12px!important}
+.card>.row2:first-child label{margin-top:0!important}
+input,select{width:100%;font:inherit;font-size:16px;padding:9px 10px;border:1px solid #cfc6c0;border-radius:4px;background:#fff;margin-top:4px}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.row2 input,.row2 select{min-width:0;font-size:15px;padding:9px 6px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin-top:6px}
+.checks label{font-weight:400;margin:0;display:flex;align-items:center;gap:8px;font-size:15px}
+.checks input{width:20px;height:20px;margin:0;flex:none}
+.missing{background:var(--miss)}
+.hint{font-size:13px;color:var(--sub);margin-top:8px}
+.formtabs{display:flex;flex-wrap:wrap;gap:6px}
+.formtabs button{font:inherit;font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:pointer}
+.formtabs button[aria-pressed=true]{border-color:var(--head);color:var(--head);font-weight:700;background:var(--pale)}
+.paper{background:#fff;border:1px solid #cfc6c0;margin-top:10px;padding:16px;overflow-x:auto}
+.paper h3{margin:0 0 8px;text-align:center;font-size:17px;letter-spacing:.3em}
+.paper .meta{font-size:12px;color:var(--sub);text-align:right}
+.paper table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;min-width:300px}
+.paper th,.paper td{border:1px solid #9b918a;padding:6px 8px;text-align:left;vertical-align:top}
+.paper th{background:#f3eeeb;font-weight:700;white-space:nowrap;width:30%}
+.paper td.miss{background:var(--miss);color:var(--head);font-weight:700}
+.status{margin-top:10px;padding:10px 12px;border-radius:6px;font-size:14px;font-weight:700}
+.status.ng{background:var(--miss);color:var(--head)}
+.status.ok{background:#e6f1e8;color:#2f6b3a}
+.btn{display:block;width:100%;font:inherit;font-weight:700;font-size:16px;padding:12px;border:none;border-radius:6px;background:var(--accent);color:#fff;cursor:pointer;margin-top:12px}
+.btn.sub{background:#fff;color:var(--head);border:1px solid var(--head)}
+.toast{font-size:13px;color:var(--sub);margin-top:6px;min-height:1em}
+.log{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;background:#fff}
+.log th,.log td{border-bottom:1px solid var(--line);padding:6px 3px;text-align:left;white-space:nowrap}
+.log td:nth-child(3){white-space:normal}
+.log th{font-size:13px;color:var(--sub)}
+.log td:last-child{text-align:right}
+.log button{font:inherit;font-size:12px;padding:2px 8px;border:1px solid var(--line);background:#fff;border-radius:4px;cursor:pointer}
+.gantt{overflow-x:auto;margin-top:8px;background:#fff;border:1px solid var(--line)}
+.gantt table{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
+.gantt th,.gantt td{border:1px solid var(--line);padding:4px 2px;text-align:center;height:30px}
+.gantt th.item,.gantt td.item{text-align:left;padding-left:8px;white-space:nowrap;width:110px;background:#faf8f7}
+.gantt .sun{color:#c0392b}
+.bar{position:relative}
+.bar i{position:absolute;left:0;right:0;height:4px}
+.bar i.p{top:8px;background:#2e2f2c}
+.bar i.a{top:18px;background:var(--accent)}
+.gantt tr.count td{font-weight:700;background:var(--pale)}
+.gantt tr.count td.item{background:var(--pale);color:var(--head)}
+.gantt td.flash{animation:fl 1.2s}
+@keyframes fl{0%{background:#ffd2c5}100%{background:var(--pale)}}
+.legend{font-size:13px;color:var(--sub);margin-top:6px}
+.legend b{display:inline-block;width:18px;height:4px;vertical-align:4px;margin:0 4px 0 10px}
+.sum{width:100%;border-collapse:collapse;font-size:15px;margin-top:8px;background:#fff}
+.sum th,.sum td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+.sum td:last-child,.sum th:last-child{text-align:right}
+.delay{margin-top:8px;font-size:14px}
+.delay span{display:inline-block;background:var(--miss);color:var(--head);font-weight:700;padding:2px 8px;border-radius:4px;margin:2px 4px 2px 0}
+footer{max-width:760px;margin:0 auto;padding:8px 16px 40px;font-size:13px;color:var(--sub)}
+</style>
+</head>
+<body>
+<header>
+  <h1>着工書類と出勤簿の試作品(見本)</h1>
+  <p>入っている名前や工事はすべて説明用の見本です。入力した内容はどこにも送られず、画面を閉じると消えます。</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="p1">着工書類</button>
+    <button role="tab" aria-selected="false" data-tab="p2">出勤簿と工程表</button>
+  </div>
+</header>
+
+<main>
+<section class="panel on" id="p1">
+  <p class="step">1. 入力用紙に工事の情報を入れます</p>
+  <div class="card" id="f1">
+    <label>工事名<input id="kname" value="見本線 鉄塔基礎工事"></label>
+    <label>工事場所<input id="kplace" value="見本村 大字見本"></label>
+    <div class="row2">
+      <label>着工日<input id="kstart" type="date" value="2026-12-07"></label>
+      <label>竣工予定日<input id="kend" type="date" value="2027-03-19"></label>
+    </div>
+    <label>発注者<select id="kclient"><option value="">選んでください</option><option selected>電力会社(見本)</option><option>県(見本)</option><option>村(見本)</option></select></label>
+    <label>現場代理人<select id="kdai"></select></label>
+    <label>主任技術者<select id="kshu"></select></label>
+    <label>入る作業員(社員名簿から選ぶだけ)</label>
+    <div class="checks" id="kworkers"></div>
+    <label>緊急時の搬送先<select id="khosp"><option value="">選んでください</option><option>見本病院(車で20分)</option><option>見本診療所(車で8分)</option></select></label>
+    <p class="hint">選ぶ項目は社員名簿と一覧の表から読み込みます。人が入れ替わったときは、名簿の表を直すだけです。</p>
+  </div>
+
+  <p class="step">2. 様式に自動で写ります</p>
+  <div class="formtabs" id="ftabs">
+    <button data-f="todoke" aria-pressed="true">着工届</button>
+    <button data-f="meibo" aria-pressed="false">現場作業員名簿</button>
+    <button data-f="renraku" aria-pressed="false">緊急連絡体制表</button>
+  </div>
+  <div class="paper" id="paper"></div>
+  <div id="status" class="status"></div>
+  <button class="btn" id="pdf">提出する様式をまとめてPDFにする</button>
+  <p class="toast" id="pdfmsg"></p>
+</section>
+
+<section class="panel" id="p2">
+  <p class="step">1. 出勤簿に1行入れます</p>
+  <div class="card">
+    <div class="row2">
+      <label>日付<select id="adate"></select></label>
+      <label>名前<select id="aname"></select></label>
+    </div>
+    <div class="row2">
+      <label>工事<select id="aproj"></select></label>
+      <label>時間<select id="ahours"><option>8</option><option>4</option><option>6</option><option>10</option></select></label>
+    </div>
+    <button class="btn" id="add">出勤簿に記録する</button>
+  </div>
+  <table class="log"><thead><tr><th>日付</th><th>名前</th><th>工事</th><th>時間</th><th></th></tr></thead><tbody id="logbody"></tbody></table>
+
+  <p class="step">2. 工程表の作業員数に自動で入ります</p>
+  <label style="margin-top:0">見る工事<select id="gproj"></select></label>
+  <div class="gantt"><table id="gantt"></table></div>
+  <p class="legend">予定<b style="background:#2e2f2c"></b>実績<b style="background:#f55438"></b>作業員数は出勤簿から数えています</p>
+  <div class="delay" id="delay"></div>
+
+  <p class="step">3. 工事ごとの延べ時間も同時に出ます</p>
+  <table class="sum"><thead><tr><th>工事</th><th>延べ人数</th><th>延べ時間</th></tr></thead><tbody id="sumbody"></tbody></table>
+  <p class="hint">本番では、ここに単価を掛けて工事ごとの人件費を出し、月ごと・人ごとの時間は給与の集計に使います。</p>
+</section>
+</main>
+<footer>試作品 Ironweb(アイアンウェブ)。本番は今お使いのエクセルの中に組み込みます。</footer>
+
+<script>
+const staff=[
+ {n:'見本 一郎',r:'現場代理人',q:'1級電気工事施工管理技士',age:52},
+ {n:'見本 二郎',r:'主任技術者',q:'1級土木施工管理技士',age:47},
+ {n:'見本 三郎',r:'作業員',q:'玉掛け技能講習',age:38},
+ {n:'見本 四郎',r:'作業員',q:'車両系建設機械',age:29},
+ {n:'見本 花子',r:'作業員',q:'第二種電気工事士',age:26},
+ {n:'見本 五郎',r:'作業員',q:'足場の組立て等作業主任者',age:61},
+ {n:'見本 六郎',r:'交通誘導員',q:'交通誘導警備業務2級',age:44},
+ {n:'見本 七郎',r:'作業員',q:'小型移動式クレーン',age:33}
+];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function opts(sel,list,first,val){sel.innerHTML=(first?'<option value="">'+first+'</option>':'')+list.map(v=>'<option'+(v===val?' selected':'')+'>'+esc(v)+'</option>').join('')}
+opts($('kdai'),staff.map(s=>s.n),'選んでください','見本 一郎');
+opts($('kshu'),staff.map(s=>s.n),'選んでください','');
+$('kworkers').innerHTML=staff.slice(2).map((s,i)=>'<label><input type="checkbox" value="'+esc(s.n)+'"'+(i<3?' checked':'')+'>'+esc(s.n)+'</label>').join('');
+
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+ document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===b.dataset.tab));
+ window.scrollTo(0,0);
+});
+let curF='todoke';
+document.querySelectorAll('#ftabs button').forEach(b=>b.onclick=()=>{curF=b.dataset.f;document.querySelectorAll('#ftabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));render1()});
+
+function jd(v){if(!v)return'';const d=new Date(v+'T00:00');return'令和'+(d.getFullYear()-2018)+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日'}
+function cell(v){return v?'<td>'+esc(v)+'</td>':'<td class="miss">未入力</td>'}
+function render1(){
+ const v={name:$('kname').value.trim(),place:$('kplace').value.trim(),start:$('kstart').value,end:$('kend').value,client:$('kclient').value,dai:$('kdai').value,shu:$('kshu').value,hosp:$('khosp').value};
+ const ws=[...document.querySelectorAll('#kworkers input:checked')].map(i=>i.value);
+ ['kname','kplace','kstart','kend','kclient','kdai','kshu','khosp'].forEach(id=>$(id).classList.toggle('missing',!$(id).value.trim()));
+ const find=n=>staff.find(s=>s.n===n)||{};
+ let h='';
+ if(curF==='todoke'){
+  h='<p class="meta">様式の見本</p><h3>着工届</h3><table><tr><th>工事名</th>'+cell(v.name)+'</tr><tr><th>工事場所</th>'+cell(v.place)+'</tr><tr><th>発注者</th>'+cell(v.client)+'</tr><tr><th>着工日</th>'+cell(jd(v.start))+'</tr><tr><th>竣工予定日</th>'+cell(jd(v.end))+'</tr><tr><th>現場代理人</th>'+cell(v.dai)+'</tr><tr><th>主任技術者</th>'+cell(v.shu)+'</tr><tr><th>作業員数</th>'+cell(ws.length?ws.length+'名':'')+'</tr></table>';
+ }else if(curF==='meibo'){
+  const rows=[v.dai,v.shu,...ws].filter(Boolean);
+  h='<p class="meta">様式の見本</p><h3>現場作業員名簿</h3><table><tr><th>工事名</th>'+cell(v.name)+'</tr></table><table style="margin-top:8px"><tr><th style="width:auto">氏名</th><th style="width:auto">役割</th><th style="width:auto">資格</th><th style="width:auto">年齢</th></tr>'+
+   (rows.length?rows.map(n=>{const s=find(n);const role=n===v.dai?'現場代理人':n===v.shu?'主任技術者':s.r;return'<tr><td style="white-space:nowrap">'+esc(n)+'</td><td>'+esc(role)+'</td><td>'+esc(s.q)+'</td><td>'+s.age+'</td></tr>'}).join(''):'<tr><td class="miss" colspan="4">作業員が選ばれていません</td></tr>')+'</table>';
+ }else{
+  h='<p class="meta">様式の見本</p><h3>緊急連絡体制表</h3><table><tr><th>工事名</th>'+cell(v.name)+'</tr><tr><th>現場責任者</th>'+cell(v.dai)+'</tr><tr><th>連絡を受ける人</th>'+cell(v.shu)+'</tr><tr><th>搬送先</th>'+cell(v.hosp)+'</tr><tr><th>発注者への連絡</th>'+cell(v.client?v.client+' 監督員':'')+'</tr></table>';
+ }
+ $('paper').innerHTML=h;
+ const miss=['工事名','工事場所','着工日','竣工予定日','発注者','現場代理人','主任技術者','搬送先'].filter((_,i)=>![v.name,v.place,v.start,v.end,v.client,v.dai,v.shu,v.hosp][i]);
+ if(!ws.length)miss.push('作業員');
+ const st=$('status');
+ if(miss.length){st.className='status ng';st.textContent='入力し忘れが'+miss.length+'か所あります: '+miss.join('・')}
+ else{st.className='status ok';st.textContent='入力し忘れはありません。3つの様式がそろいました。'}
+ $('pdfmsg').textContent='';
+}
+document.querySelectorAll('#f1 input,#f1 select').forEach(e=>{e.addEventListener('input',render1);e.addEventListener('change',render1)});
+$('pdf').onclick=()=>{$('pdfmsg').textContent=$('status').classList.contains('ng')?'入力し忘れを埋めてから、まとめて出します(本番の動き)。':'本番では、提出する様式をPDFにまとめ、工事名のフォルダに保存します。'};
+render1();
+
+// 出勤簿と工程表
+const projs=['見本線 鉄塔基礎工事','村道 改良工事(見本)'];
+const days=[];const base=new Date('2026-12-07T00:00');
+for(let i=0;i<12;i++){const d=new Date(base);d.setDate(base.getDate()+i);days.push(d)}
+const dkey=d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+const dlabel=d=>(d.getMonth()+1)+'/'+d.getDate();
+const wd=['日','月','火','水','木','金','土'];
+const items={
+ '見本線 鉄塔基礎工事':[['準備工',0,1,0,1],['掘削',2,5,2,4],['型枠・配筋',6,9,-1,-1],['コンクリート',10,11,-1,-1]],
+ '村道 改良工事(見本)':[['準備工',0,0,0,0],['路盤工',1,6,1,5],['舗装工',7,10,-1,-1],['片付け',11,11,-1,-1]]
+};
+let log=[];
+const seed=[[0,0,0,8],[0,2,0,8],[0,3,0,8],[1,0,0,8],[1,2,0,8],[1,3,0,8],[1,4,0,8],[2,2,0,8],[2,3,0,8],[2,6,0,8],[3,0,0,8],[3,2,0,8],[3,4,0,8],[4,2,0,8],[4,3,0,8],[5,1,0,8],[5,4,0,8],[1,1,1,8],[1,5,1,8],[2,1,1,8],[2,5,1,8],[3,1,1,8],[3,5,1,8],[3,7,1,6]];
+seed.forEach(s=>log.push({d:s[0],n:staff[s[1]].n,p:projs[s[2]],h:s[3]}));
+opts($('adate'),days.slice(0,8).map(d=>dlabel(d)+'('+wd[d.getDay()]+')'),'',dlabel(days[6])+'('+wd[days[6].getDay()]+')');
+opts($('aname'),staff.map(s=>s.n),'',staff[2].n);
+opts($('aproj'),projs,'',projs[0]);
+opts($('gproj'),projs,'',projs[0]);
+let lastAdd=null;
+function render2(){
+ $('logbody').innerHTML=log.map((r,i)=>({r,i})).sort((a,b)=>b.r.d-a.r.d||b.i-a.i).slice(0,6).map(({r,i})=>'<tr><td>'+dlabel(days[r.d])+'</td><td>'+esc(r.n)+'</td><td>'+esc(r.p.replace('(見本)','').replace('見本線 ',''))+'</td><td>'+r.h+'h</td><td><button data-i="'+i+'" aria-label="この行を消す">消す</button></td></tr>').join('')+'<tr><td colspan="5" style="color:#5d5853;font-size:13px">新しい順に6件を表示(全'+log.length+'件)</td></tr>';
+ document.querySelectorAll('#logbody button').forEach(b=>b.onclick=()=>{log.splice(+b.dataset.i,1);lastAdd=null;render2()});
+ const p=$('gproj').value;const it=items[p];
+ let h='<tr><th class="item">作業</th>'+days.map(d=>'<th class="'+(d.getDay()===0?'sun':'')+'">'+dlabel(d)+'<br>'+wd[d.getDay()]+'</th>').join('')+'</tr>';
+ it.forEach(([name,ps,pe,as,ae])=>{h+='<tr><td class="item">'+name+'</td>'+days.map((_,i)=>'<td class="bar">'+(i>=ps&&i<=pe?'<i class="p"></i>':'')+(as>=0&&i>=as&&i<=ae?'<i class="a"></i>':'')+'</td>').join('')+'</tr>'});
+ h+='<tr class="count"><td class="item">作業員数</td>'+days.map((_,i)=>{const c=new Set(log.filter(r=>r.p===p&&r.d===i).map(r=>r.n)).size;return'<td'+(lastAdd&&lastAdd.p===p&&lastAdd.d===i?' class="flash"':'')+'>'+(c||'')+'</td>'}).join('')+'</tr>';
+ $('gantt').innerHTML=h;
+ const today=5;
+ const late=it.filter(([,ps,pe,as,ae])=>as>=0&&ae<pe&&ae<today&&pe>=today).map(([n,ps,pe,as,ae])=>n+' 予定より'+(Math.min(today,pe)-ae)+'日遅れ');
+ $('delay').innerHTML=late.length?late.map(t=>'<span>'+esc(t)+'</span>').join('')+'<br><small style="color:#5d5853">見本の今日は '+dlabel(days[today])+' として計算しています</small>':'<small style="color:#5d5853">遅れている作業はありません</small>';
+ $('sumbody').innerHTML=projs.map(pp=>{const rs=log.filter(r=>r.p===pp);return'<tr><td>'+esc(pp)+'</td><td>'+rs.length+'人</td><td>'+rs.reduce((a,r)=>a+r.h,0)+'時間</td></tr>'}).join('');
+}
+$('add').onclick=()=>{const d=$('adate').selectedIndex;const r={d,n:$('aname').value,p:$('aproj').value,h:+$('ahours').value};log.push(r);lastAdd=r;$('gproj').value=r.p;render2()};
+$('gproj').onchange=()=>{lastAdd=null;render2()};
+render2();
+</script>
+</body>
+</html>
