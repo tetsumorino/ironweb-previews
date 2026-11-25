@@ -533,3 +533,19 @@ h1,h2,h3,.h2,.ans__t,.voice__q,.person__q,.step__t,.sh__en,.btn,summary{
   .fv__cap{margin-top:12px;}
   .fv__town-track img{height:210px;}
 }
+
+/* はたらく人: スマホとタブレットでは写真を左に小さく置き、名前と見出しを右に並べる(2026-11-25 森野さん指示) */
+@media (max-width:859px){
+  .people__list{gap:var(--s5);}
+  .people__list li{
+    display:grid; grid-template-columns:clamp(112px,30vw,160px) 1fr;
+    column-gap:20px; align-items:center;
+  }
+  .person__ph{grid-row:1 / span 2; aspect-ratio:3/4; width:100%;}
+  .person__ph.shade,.person__ph.shade--sun,.person__ph.shade--peach,.person__ph.shade--leaf{box-shadow:7px 7px 0 var(--leaf);}
+  .person__ph.shade--sun{box-shadow:7px 7px 0 var(--sun);}
+  .person__ph.shade--peach{box-shadow:7px 7px 0 var(--peach);}
+  .person__meta{margin-top:0; align-self:end;}
+  .person__q{align-self:start; font-size:17px; margin-top:8px;}
+  .person__b{grid-column:1 / -1; margin-top:16px;}
+}
